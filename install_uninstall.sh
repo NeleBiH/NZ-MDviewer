@@ -208,6 +208,7 @@ do_force_install() {
         echo -e "  ${GREEN}✓${NC} Obrisan: $DESKTOP_DIR/nzmdmaster.desktop"
     fi
     # Cleanup old nzmdviewer artifacts (renamed to nzmdmaster)
+    [ -d "$HOME/.local/share/nzmdviewer" ] && rm -rf "$HOME/.local/share/nzmdviewer" && echo -e "  ${GREEN}✓${NC} Obrisan stari dir: ~/.local/share/nzmdviewer"
     [ -f "$BIN_DIR/nzmdviewer" ] && rm -f "$BIN_DIR/nzmdviewer" && echo -e "  ${GREEN}✓${NC} Obrisan stari: $BIN_DIR/nzmdviewer"
     [ -f "$DESKTOP_DIR/nzmdviewer.desktop" ] && rm -f "$DESKTOP_DIR/nzmdviewer.desktop" && echo -e "  ${GREEN}✓${NC} Obrisan stari: $DESKTOP_DIR/nzmdviewer.desktop"
     # Cleanup old balkanmd artifacts
@@ -561,7 +562,9 @@ do_uninstall() {
         echo -e "  ${GREEN}✓${NC} Obrisan: $BIN_DIR/nzmdmaster"
     fi
     # Cleanup old nzmdviewer (renamed to nzmdmaster)
+    [ -d "$HOME/.local/share/nzmdviewer" ] && rm -rf "$HOME/.local/share/nzmdviewer" && echo -e "  ${GREEN}✓${NC} Obrisan stari dir: ~/.local/share/nzmdviewer"
     [ -f "$BIN_DIR/nzmdviewer" ] && rm -f "$BIN_DIR/nzmdviewer" && echo -e "  ${GREEN}✓${NC} Obrisan stari: $BIN_DIR/nzmdviewer"
+    [ -f "$DESKTOP_DIR/nzmdviewer.desktop" ] && rm -f "$DESKTOP_DIR/nzmdviewer.desktop" && echo -e "  ${GREEN}✓${NC} Obrisan stari: $DESKTOP_DIR/nzmdviewer.desktop"
     # Cleanup old balkanmd
     if [ -f "$BIN_DIR/balkanmd" ]; then
         rm -f "$BIN_DIR/balkanmd"
