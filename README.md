@@ -1,5 +1,11 @@
 # NZ-MDmaster
 
+![Version](https://img.shields.io/badge/Version-0.3.0-blue?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3-3776AB?style=flat-square&logo=python&logoColor=white)
+![GUI](https://img.shields.io/badge/GUI-PySide6%20%2F%20Qt6-41CD52?style=flat-square&logo=qt&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-brightgreen?style=flat-square)
+![Platform](https://img.shields.io/badge/Platform-Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+
 A desktop Markdown editor and viewer for Linux, built with Python and PySide6.
 
 Write, preview, and manage Markdown files with a GitHub-style theme that automatically follows your system's light/dark mode preference. Features a built-in syntax-highlighted editor with live preview, file browser, PDF export, and full desktop integration.
