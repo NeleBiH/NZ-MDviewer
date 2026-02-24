@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Ruff / linters
+.ruff_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+.directory
+
+# Dev files (ne idu u repo)
+test.md
+dev_log.md
+sljedece.txt

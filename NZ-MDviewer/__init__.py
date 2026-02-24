@@ -1,0 +1,2 @@
+VERSION = "0.3.0"
+APP_NAME = "NZ-MDviewer"

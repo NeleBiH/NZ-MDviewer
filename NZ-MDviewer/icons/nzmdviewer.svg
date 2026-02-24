@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c2128"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="50%" stop-color="#a371f7"/>
+      <stop offset="100%" stop-color="#d2a8ff"/>
+    </linearGradient>
+    <linearGradient id="dot_grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#79c0ff"/>
+      <stop offset="100%" stop-color="#d2a8ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Gradient border ring -->
+  <rect width="256" height="256" rx="52" fill="url(#border)"/>
+
+  <!-- Dark background -->
+  <rect x="5" y="5" width="246" height="246" rx="48" fill="url(#bg)"/>
+
+  <!-- Subtle top highlight -->
+  <rect x="5" y="5" width="246" height="56" rx="48" fill="white" fill-opacity="0.03"/>
+
+  <!-- ── .MD  text ── drawn as paths for consistent rendering -->
+
+  <!-- DOT (period) before MD — bottom-left -->
+  <rect x="16" y="178" width="22" height="22" rx="5" fill="url(#dot_grad)"/>
+
+  <!-- ── M  (bold geometric sans) ──
+       Bounding box x:48..148, y:60..200  (100×140px)
+       Arm width: 26px
+       V-notch bottom: y=148
+  -->
+  <polygon
+    points="48,200 48,60 74,60 98,138 122,60 148,60 148,200 122,200 122,118 98,155 74,118 74,200"
+    fill="#e6edf3"/>
+
+  <!-- ── D  (bold geometric D) ──
+       Bounding box x:160..234, y:60..200  (74×140px)
+       Left stem: 160..186
+       Right curve approximated as a rounded rectangle / path
+  -->
+  <!-- Left stem of D -->
+  <rect x="160" y="60" width="26" height="140" rx="6" fill="#e6edf3"/>
+  <!-- Body of D: right half rounded -->
+  <path d="M 180,60 L 204,60 Q 242,60 242,130 Q 242,200 204,200 L 180,200 Z"
+        fill="#e6edf3"/>
+  <!-- Inner cutout to make D hollow -->
+  <path d="M 186,86 L 204,86 Q 218,86 218,130 Q 218,174 204,174 L 186,174 Z"
+        fill="url(#bg)"/>
+
+</svg>
